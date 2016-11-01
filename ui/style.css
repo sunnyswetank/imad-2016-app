@@ -54,4 +54,5 @@ h1,h2,h3,h4,h5,h6,.c-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
 }
 .container{
     background-image:url("https://github.com/sunnyswetank/imad-2016-app/blob/master/ui/laptop-1483974_1280.jpg");
+    margin-bottom:40px;
 }
