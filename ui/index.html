@@ -1,18 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Welcome to Sunny's app</title>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am your sucky webapp.
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
+  <head>
+    <title>
+      Crayon Narrative
+    </title>
+    <link href="/css1_v2.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+	$("#defmenu").addClass("clicked");
+	    $(".menu").click(function() {
+			$(this).addClass("clicked");
+			$(".menu").not(this).removeClass("clicked");//remove the clicked class from all other elements
+		});
+	});	
+</script>
+</head>
 </html>
