@@ -8,9 +8,8 @@ body {
 font-family: Arial, Verdana, sans-serif;
 background-color: whitesmoke;}
 .pvalid{
-	height:75%;
-	width:75%;
-	background-color:#bbbbaa;
+	height:100%;
+	width:60%;
 	margin:20px auto 20px auto;
 	padding:10px;
 	max-width:350px;
