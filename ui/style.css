@@ -1,22 +1,88 @@
+body{
+	width:100%;
+	margin:0;
+}
+h1, h2 {
+color: #ee3e80;}
+p {
+color: black;}
 body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+font-family: Arial, Verdana, sans-serif;
+background-color: whitesmoke;}
+.pvalid{
+	height:75%;
+	width:75%;
+	background-color:#bbbbaa;
+	margin:20px auto 20px auto;
+	padding:10px;
+	max-width:350px;
+	min-width:150px;
+	text-align:center;
+	min-height:100px;
+	max-height:1000px;
+	border:1px solid black;
+	overflow:hidden;
+
+}
+h1,h2{
+	border:1px solid black;
+	max-width:350px;
+	margin:20px auto 20px auto;
+	padding:10px;
+	text-align:center;
 }
 
-.center {
-    text-align: center;
-}
+.c-navbar{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:black;
+	position:fixed;
+	width:100%;
+	}
+.c-navbar li{
+	float:left;
+	}
+.c-navbar li a,.w3-navitem{
+	display:block;padding:8px 16px;color:white;
+	}
 
-.text-big {
-    font-size: 300%;
+.c-navbar .w3-dropdown-hover,.w3-navbar .w3-dropdown-click{position:static}
+.c-navbar .w3-dropdown-hover:hover,.w3-navbar .w3-dropdown-hover:first-child,.w3-navbar .w3-dropdown-click:hover{background-color:#ccc;color:#000}
+.c-navbar a,.w3-topnav a,.w3-sidenav a,.w3-dropdown-content a,.w3-accordion-content a,.w3-dropnav a{text-decoration:none!important}
+.c-navbar .w3-opennav.w3-right{float:right!important}.w3-topnav{padding:8px 8px}
+.c-card-2,{
+	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important
+	}
+h1,h2,h3,h4,h5,h6,.c-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
+.topnav {
+position:relative;
+z-index:2;
+font-size:17px;
+background-color:#5f5f5f;
+color:#f1f1f1;
+width:100%;
+padding:0;
+letter-spacing:1px;
 }
-
-.bold {
-    font-weight: bold;
+.topnav a{
+padding:10px 15px 9px 15px !important;
+display:inline-block;
 }
-
-.img-medium {
-    height: 200px;
+a.topnav-icons {
+width:52px;
+font-size:20px !important;
+padding-top:11px !important;
+padding-bottom:13px !important;
 }
-
+a.topnav-icons.fa-home {font-size:22px !important}
+a.topnav-localicons {
+font-size:20px !important;
+padding-top:6px !important;
+padding-bottom:12px !important;
+}
+.menu.clicked {background-color: #4CAF50;}
+.filler1{
+	height:81px;
+}
