@@ -37,32 +37,6 @@ background-color: whitesmoke;}
 	}
 
 h1,h2,h3,h4,h5,h6,.c-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
-.topnav {
-position:relative;
-z-index:2;
-font-size:17px;
-background-color:#5f5f5f;
-color:#f1f1f1;
-width:100%;
-padding:0;
-letter-spacing:1px;
-}
-.topnav a{
-padding:10px 15px 9px 15px !important;
-display:inline-block;
-}
-a.topnav-icons {
-width:52px;
-font-size:20px !important;
-padding-top:11px !important;
-padding-bottom:13px !important;
-}
-a.topnav-icons.fa-home {font-size:22px !important}
-a.topnav-localicons {
-font-size:20px !important;
-padding-top:6px !important;
-padding-bottom:12px !important;
-}
 .menu.clicked {background-color: #4CAF50;}
 .filler1{
 	height:81px;
