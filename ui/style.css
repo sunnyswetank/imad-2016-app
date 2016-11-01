@@ -22,6 +22,9 @@ background-color: whitesmoke;}
 	line-height:2em;
 
 }
+h1,h2,h3{
+    text-align:center;
+}
 .c-navbar{
 	list-style-type:none;
 	margin:0;
