@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 
 app.get('/#nav6',function(req,res){
     
-    pool.query("select commentbody from comments",function(err,result){
+    pool.query('select commentbody from comments',function(err,result){
     if(err){
      res.status(500).send(err.toString());   
     } else{
