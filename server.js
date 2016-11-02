@@ -23,11 +23,28 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     res.send(JSON.stringify(result.rows));
+     res.send(JSON.stringify(result.rows.commentbody));
      }  
     }   
     });
 });
+
+function createTemplate(data){
+    var commentbody=data.commentbody;
+    
+    var htmlTemplate = `
+    <html>
+        <head>
+        </head>
+        <body>
+            <div>
+                <p>$commentbody</p>
+            </div>
+        </body>
+    </html>
+    ` ;
+    return htmlTemplate;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
