@@ -13,6 +13,19 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
+var pool = new Pool(config);
+app.get('/test-db',function(req,res){
+    //make a select statement
+    pool.query('select commentbody from comments',function(err,result){
+        if(err){
+           res.status(500).send(err.toString());
+       } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+   //return a response with the results
+});
+
 app.get('/#nav6',function(req,res){
     
     pool.query('select commentbody from comments',function(err,result){
@@ -40,18 +53,6 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var pool = new Pool(config);
-app.get('/test-db',function(req,res){
-    //make a select statement
-    pool.query('select commentbody from comments',function(err,result){
-        if(err){
-           res.status(500).send(err.toString());
-       } else {
-            res.send(JSON.stringify(result.rows[0]));
-        }
-    });
-   //return a response with the results
-});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
