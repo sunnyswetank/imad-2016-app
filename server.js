@@ -22,7 +22,6 @@ app.get('/test-db',function(req,res){
            res.status(500).send(err.toString());
        } else {
             //var commentbody=JSON.stringify(result.rows[0]);
-            alert(commentbody);
             res.send(JSON.stringify(result.rows[0]));
             
         }
