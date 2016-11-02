@@ -14,7 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var pool = new Pool(config);
-app.get('/test-db',function(req,res){
+app.get('/comments',function(req,res){
     
     pool.query('select commentbody from comments',function(err,result){
     if(err){
