@@ -29,11 +29,11 @@ app.get('/test-db',function(req,res){
    //return a response with the results
 });
 
-//var result1={};
-//pool.query('select commentbody from comments', function (err, rows) {
-//    result1 = rows;
-//    res.send(result1);
-//});
+var result1={};
+pool.query('select commentbody from comments', function (err, rows) {
+    result1 = rows;
+    res.send(result1);
+});
 
 
 //app.get('/#nav6',function(req,res){
