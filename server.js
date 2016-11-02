@@ -20,7 +20,10 @@ app.get('/test-db',function(req,res){
         if(err){
            res.status(500).send(err.toString());
        } else {
+            var commentbody=result.rows[0];
+            alert(commentbody);
             res.send(JSON.stringify(result.rows[0]));
+            
         }
     });
    //return a response with the results
