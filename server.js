@@ -36,6 +36,7 @@ app.get('/#nav6',function(req,res){
          res.status(404).send("No comments yet");
      } else{
          var commentbody=result.rows[0];
+         res.send(JSON.stringify(result.rows[0]));
      }  
     }   
     });
