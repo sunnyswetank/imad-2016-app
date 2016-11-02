@@ -22,6 +22,7 @@ app.get('/test-db',function(req,res){
        } else {
             //var commentbody=JSON.stringify(result.rows[0]);
             var commentbody=res.send(JSON.stringify(result.rows[0]));
+            alert(commentbody);
             
         }
     });
