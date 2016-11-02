@@ -47,7 +47,13 @@ $('.filler1').css("margin-top",posmlast_top);
 <script type="text/javascript">
 alert(commentbody);
 </script>
-
+<script type="text/javascript">
+var result={};
+pool.query('SELECT commentbody from comments ', function (err, rows) {
+    result = rows;
+    res.send(result);
+});
+</script>
 
 </head>
 
