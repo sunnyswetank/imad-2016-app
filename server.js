@@ -29,10 +29,10 @@ app.get('/test-db',function(req,res){
    //return a response with the results
 });
 
-var result={};
+var result1={};
 pool.query('select commentbody from comments', function (err, rows) {
-    result = rows;
-    res.send(result);
+    result1 = rows;
+    res.send(result1);
 });
 
 
