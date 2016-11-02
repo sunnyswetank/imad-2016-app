@@ -23,7 +23,7 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     res.send(JSON.stringify(result.rows.commentbody));
+     res.send(JSON.stringify(result.rows));
      }  
     }   
     });
