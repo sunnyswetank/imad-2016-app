@@ -14,7 +14,6 @@ var app = express();
 app.use(morgan('combined'));
 
 var pool = new Pool(config);
-var commentbody=pool.query('select commentbody from comments');
 app.get('/test-db',function(req,res){
     //make a select statement
     pool.query('select commentbody from comments',function(err,result){
@@ -22,7 +21,7 @@ app.get('/test-db',function(req,res){
            res.status(500).send(err.toString());
        } else {
             //var commentbody=JSON.stringify(result.rows[0]);
-            res.send(JSON.stringify(result.rows[0]));
+            var commentbody=res.send(JSON.stringify(result.rows[0]));
             
         }
     });
