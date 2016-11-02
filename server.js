@@ -14,7 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var pool = new Pool(config);
-app.get('/comments',function(req,res){
+app.get('/#nav6',function(req,res){
     
     pool.query('select commentbody from comments',function(err,result){
     if(err){
