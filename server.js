@@ -1,15 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-//var Pool = reuiqre('pg').Pool;
+var Pool = reuiqre('pg').Pool;
 
-//var config={
-//    user:'sunnyswetank',
-//    databse:'sunnyswetank',
-//    host:'db.imad.hasura-app.io',
-//    port:'5432',
-//    password:process.env.DB_PASSWORD
-//};
+var config={
+    user:'sunnyswetank',
+    databse:'sunnyswetank',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+};
 var app = express();
 app.use(morgan('combined'));
 
