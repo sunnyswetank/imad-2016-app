@@ -43,7 +43,7 @@ app.get('/ui/madi.png', function (req, res) {
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select statement
-    pool.query('select * from test',function(err,result){
+    pool.query('select * from comments',function(err,result){
         if(err){
            res.status(500).send(err.toString());
        } else {
