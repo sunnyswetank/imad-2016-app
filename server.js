@@ -29,6 +29,8 @@ app.get('/test-db',function(req,res){
    //return a response with the results
 });
 
+var commentbody=pool.query('select commentbody from comments');
+
 //app.get('/#nav6',function(req,res){
     
 //    pool.query('select commentbody from comments',function(err,result){
