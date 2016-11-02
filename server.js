@@ -29,22 +29,6 @@ app.get('/nav6',function(req,res){
     });
 });
 
-function createTemplate(data){
-    var commentbody=data.commentbody;
-    
-    var htmlTemplate = `
-    <html>
-        <head>
-        </head>
-        <body>
-            <div>
-                <p>$commentbody</p>
-            </div>
-        </body>
-    </html>
-    ` ;
-    return htmlTemplate;
-}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
