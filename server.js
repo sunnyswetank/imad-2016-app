@@ -29,7 +29,11 @@ app.get('/test-db',function(req,res){
    //return a response with the results
 });
 
-
+var result={};
+pool.query('select commentbody from comments', function (err, rows) {
+    result = rows;
+    res.send(result);
+});
 
 
 //app.get('/#nav6',function(req,res){
