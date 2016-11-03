@@ -15,7 +15,7 @@ app.use(morgan('combined'));
 
 
 function createTemplate(data){
-var commentbody=("");
+var commentbody='';
 function c1(input1){
         for(var i=0;i<input1.length;i=i+1){
         commentbody+=input1[i].commentbody;
