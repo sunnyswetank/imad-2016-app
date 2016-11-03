@@ -19,7 +19,7 @@ var commentbody=("");
         if(i===0){
     commentbody=data[0].commentbody;
         }else{
-        commentbody+=data[i].commentbody;
+        commentbody+=data[1].commentbody;
             }
     return commentbody;        
    }
