@@ -21,7 +21,7 @@ function c1(input1){
         return commentbody; 
 }     
 
-
+var commentbody2=c1(result.rows);
 function createTemplate(data){
     var htmlTemplate = `
     <html>
@@ -29,7 +29,7 @@ function createTemplate(data){
         </head>
         <body>
             <div>
-                <p>${commentbody}</p>
+                <p>${commentbody2}</p>
             </div>
         </body>
     </html>
