@@ -20,11 +20,10 @@ function c1(input1){
          }
         return commentbody; 
 }     
-
-
+var commentbody2=c1(data);
 
 function createTemplate(data){
-var commentbody2=c1(data);
+
     var htmlTemplate = `
     <html>
         <head>
