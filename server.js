@@ -20,7 +20,7 @@ function createTemplate(data){
         }else{
         commentbody+=data[i+1].commentbody;
             }
-    
+    }    
     var htmlTemplate = `
     <html>
         <head>
