@@ -13,14 +13,6 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var commentbody=('');
-function c1(input1){
-        for(var i=0;i<input1.length;i=i+1){
-        commentbody+=input1[i].commentbody;
-         }
-        return commentbody; 
-}     
-var commentbody2=c1(data);
 
 function createTemplate(data){
 
