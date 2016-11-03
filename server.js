@@ -18,8 +18,7 @@ function createTemplate(data){
         if(i===0){
     var commentbody=data[i].commentbody;
         }else{
-        i=i+1;
-        commentbody+=data[i].commentbody;
+        commentbody+=data[i+1].commentbody;
             }
     
     var htmlTemplate = `
