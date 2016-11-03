@@ -24,19 +24,19 @@ function c1(input1){
 }     
 var commentbody2=c1(data);
     var htmlTemplate = `
-    <html>
-        <head>
-
-        </head>
-        <body>
-        <?php
+    <?php
           if($_POST['formSubmit'] == "Submit") 
           {
             $varMovie = $_POST['formMovie'];
             $varName = $_POST['formName'];
           }
         ?>
-    
+    <html>
+        <head>
+
+        </head>
+        <body>
+        
     <form action="myform.php" method="post">
         Which is your favorite movie?
         <input type="text" name="formMovie" maxlength="50" value="<?=$varMovie;?>">
