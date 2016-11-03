@@ -15,8 +15,11 @@ app.use(morgan('combined'));
 
 function createTemplate(data){
     for(i=0;i<data.length;i=i+1){
-        
+        if(i===0){
     var commentbody=data[i].commentbody;
+        }else{
+        commentbody+=data[i].commentbody;    
+        }
     
     var htmlTemplate = `
     <html>
