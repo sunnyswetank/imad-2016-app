@@ -28,6 +28,13 @@ var commentbody2=c1(data);
         <head>
         </head>
         <body>
+        <form action="myform.php" method="post">
+ 
+Which is your favorite movie?
+<input type="text" name="formMovie" maxlength="50">
+ 
+<input type="submit" name="formSubmit" value="Submit">
+</form>
             <div>
                 <p>${commentbody2}</p>
             </div>
