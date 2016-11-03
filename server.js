@@ -21,7 +21,7 @@ function c1(input1){
         return commentbody; 
 }     
 
-var commentbody2=c1(result.rows);
+//var commentbody2=c1(result.rows);
 function createTemplate(data){
     var htmlTemplate = `
     <html>
@@ -29,7 +29,7 @@ function createTemplate(data){
         </head>
         <body>
             <div>
-                <p>${commentbody2}</p>
+                <p>${commentbody}</p>
             </div>
         </body>
     </html>
@@ -49,9 +49,9 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     var articleData=result.rows;         
-     res.send(createTemplate(articleData));
-    //res.send(JSON.stringify(result.rows));
+     //var articleData=result.rows;         
+     //res.send(createTemplate(articleData));
+    res.send(JSON.stringify(result.rows));
      }  
     }   
     });
