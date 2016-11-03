@@ -13,22 +13,6 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var pool = new Pool(config);
-app.get('/nav6',function(req,res){
-    
-    pool.query('select commentbody from comments',function(err,result){
-    if(err){
-     res.status(500).send(err.toString());   
-    } else{
-     if(result.rows.length===0){
-         res.status(404).send("No comments yet");
-     } else{
-     res.send(JSON.stringify(result.rows));
-     }  
-    }   
-    });
-});
-
 function createTemplate(data){
     var commentbody=data.commentbody;
     
@@ -45,6 +29,24 @@ function createTemplate(data){
     ` ;
     return htmlTemplate;
 }
+
+var pool = new Pool(config);
+app.get('/nav6',function(req,res){
+    
+    pool.query('select commentbody from comments',function(err,result){
+    if(err){
+     res.status(500).send(err.toString());   
+    } else{
+     if(result.rows.length===0){
+         res.status(404).send("No comments yet");
+     } else{
+     var articleData=result.rows[0];         
+     res.send(createTemplate(articleData));
+     }  
+    }   
+    });
+});
+
 
 
 app.get('/', function (req, res) {
