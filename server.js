@@ -14,7 +14,10 @@ var app = express();
 app.use(morgan('combined'));
 
 function createTemplate(data){
-    var commentbody=data.commentbody;
+    for(i=0;i<data.length;i=i+1){
+        
+    
+    var commentbody=data.commentbody[i];
     
     var htmlTemplate = `
     <html>
@@ -28,6 +31,7 @@ function createTemplate(data){
     </html>
     ` ;
     return htmlTemplate;
+}
 }
 
 var pool = new Pool(config);
