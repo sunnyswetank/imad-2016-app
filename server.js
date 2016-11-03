@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 function createTemplate(data){
 //    for(i=0;i<data.length;i=i+1){
 //        if(i===0){
-    var commentbody=data[i+1].commentbody;
+    var commentbody=data[1].commentbody;
 //        }else{
 //        commentbody+=data[i+1].commentbody;
 //            }
