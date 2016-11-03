@@ -44,7 +44,7 @@ app.get('/nav6',function(req,res){
      } else{
      //var articleData=result.rows;         
      //res.send(createTemplate(articleData));
-    res.send(JSON.stringify(result.rows));
+    //res.send(JSON.stringify(result.rows));
      }  
     }   
     });
