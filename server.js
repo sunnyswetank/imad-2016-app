@@ -18,8 +18,8 @@ function c1(input1){
         for(var i=0;i<input1.length;i=i+1){
         commentbody+=input1[i].commentbody;
          }
+        return commentbody; 
 }     
-c1(result.rows);    
 
 
 function createTemplate(data){
