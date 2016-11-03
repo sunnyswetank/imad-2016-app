@@ -40,7 +40,7 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     var articleData=result.rows[0];         
+     var articleData=result.rows;         
      res.send(createTemplate(articleData));
      }  
     }   
