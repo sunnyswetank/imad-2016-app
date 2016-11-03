@@ -13,17 +13,17 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-
-function createTemplate(data){
-
+var commentbody=('');
 function c1(input1){
-        var commentbody='';
         for(var i=0;i<input1.length;i=i+1){
         commentbody+=input1[i].commentbody;
          }
         return commentbody; 
 }     
-    
+
+
+
+function createTemplate(data){
 var commentbody2=c1(data);
     var htmlTemplate = `
     <html>
