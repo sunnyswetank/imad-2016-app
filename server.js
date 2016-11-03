@@ -14,7 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 function createTemplate(data){
-    var commentbody=data[0];
+    var commentbody=data.length;
     
     var htmlTemplate = `
     <html>
