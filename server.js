@@ -13,14 +13,21 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
+var commentbody=("");
+    function c1(data){
+        for(var i=0;i<data.length;i=i+1){
+        if(i===0){
+    commentbody=data[0].commentbody;
+        }else{
+        commentbody+=data[i].commentbody;
+            }
+    return commentbody;        
+   }
+    }
+    
+
+
 function createTemplate(data){
-//    for(var i=0;i<data.length;i=i+1){
-//        if(i===0){
-    var commentbody=data[1].commentbody;
-//        }else{
-//        commentbody+=data[i+1].commentbody;
-//            }
-//   }    
     var htmlTemplate = `
     <html>
         <head>
