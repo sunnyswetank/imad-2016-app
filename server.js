@@ -14,16 +14,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var commentbody=("");
-    function c1(input1){
+function c1(input1){
         for(var i=0;i<input1.length;i=i+1){
-        if(i===0){
-    commentbody=input1[0].commentbody;
-        }else{
-        commentbody+=input1[1].commentbody;
-            }
-    return commentbody;        
-   }
-    }
+        commentbody+=input1[i].commentbody;
+         }
+}     
 c1(result.rows);    
 
 
