@@ -22,7 +22,7 @@ function createTemplate(data){
         </head>
         <body>
             <div>
-                <p>$(commentbody)</p>
+                <p>${commentbody}</p>
             </div>
         </body>
     </html>
