@@ -14,7 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 function createTemplate(data){
-    var commentbody=data.commentbody[0];
+    var commentbody=data[0].commentbody;
     
     var htmlTemplate = `
     <html>
@@ -41,9 +41,9 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     //var articleData=result.rows;         
-    // res.send(createTemplate(articleData));
-    res.send(JSON.stringify(result.rows));
+     var articleData=result.rows;         
+     res.send(createTemplate(articleData));
+    //res.send(JSON.stringify(result.rows));
      }  
     }   
     });
