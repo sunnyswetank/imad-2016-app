@@ -15,14 +15,21 @@ app.use(morgan('combined'));
 
 
 function createTemplate(data){
-
+var commentbody=('');
+function c1(input1){
+        for(var i=0;i<input1.length;i=i+1){
+        commentbody+='<hr/>'+input1[i].commentbody;
+         }
+        return commentbody; 
+}     
+var commentbody2=c1(data);
     var htmlTemplate = `
     <html>
         <head>
         </head>
         <body>
             <div>
-                <p>commentbody2</p>
+                <p>${commentbody2}</p>
             </div>
         </body>
     </html>
@@ -42,9 +49,9 @@ app.get('/nav6',function(req,res){
      if(result.rows.length===0){
          res.status(404).send("No comments yet");
      } else{
-     //var articleData=result.rows;         
-     //res.send(createTemplate(articleData));
-    res.send(JSON.stringify(result.rows));
+    var articleData=result.rows;         
+    res.send(createTemplate(articleData));
+    //res.send(JSON.stringify(result.rows));
      }  
     }   
     });
