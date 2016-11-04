@@ -29,7 +29,8 @@ var commentbody2=c1(data);
     <?php
      if($_POST['formSubmit'] == "Submit") 
       {
-        $varMovie = $_POST['formMovie'];
+           $varMovie = $_POST['formMovie'];
+            $varName = $_POST['formName'];
     }
     ?>
     
