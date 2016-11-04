@@ -44,6 +44,7 @@ var commentbody2=c1(data);
         </form>
             <div>
                 <p>${commentbody2}</p>
+                <p>${mytext}</p>
             </div>
         </body>
     </html>
