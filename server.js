@@ -58,6 +58,23 @@ app.get('/nav7',function(req,res){
     });
 });
 
+var pool = new Pool(config);
+app.get('/nav6',function(req,res){
+    
+    pool.query('select commentbody from comments',function(err,result){
+    if(err){
+     res.status(500).send(err.toString());   
+    } else{
+     if(result.rows.length===0){
+         res.status(404).send("No comments yet");
+     } else{
+    var articleData=result.rows;         
+    res.send(createTemplate(articleData));
+    //res.send(JSON.stringify(result.rows));
+     }  
+    }   
+    });
+});
 
 
 
