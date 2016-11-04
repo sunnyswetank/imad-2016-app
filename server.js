@@ -42,7 +42,7 @@ var commentbody2=c1(data);
 
 
 var pool = new Pool(config);
-app.get('/nav6',function(req,res){
+app.get('/nav7',function(req,res){
     
     pool.query('select commentbody from comments',function(err,result){
     if(err){
