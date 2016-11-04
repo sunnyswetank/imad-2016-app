@@ -26,7 +26,25 @@ function c1(input1){
 
 var commentbody2=c1(data);
     var htmlTemplate = `
-   
+    <?php
+    if($_POST['formSubmit'] == "Submit")
+    {
+    	$errorMessage = "";
+    	
+    	if(empty($_POST['formMovie']))
+    	{
+    		$errorMessage .= "<li>You forgot to enter a movie!</li>";
+    	}
+    	if(empty($_POST['formName']))
+    	{
+    		$errorMessage .= "<li>You forgot to enter a name!</li>";
+    	}
+    	
+    	$varMovie = $_POST['formMovie'];
+    	$varName = $_POST['formName'];
+    }
+    ?>
+
     <html>
         <head>
 
@@ -34,7 +52,7 @@ var commentbody2=c1(data);
         <body>
          
         
-        <form action="https://github.com/sunnyswetank/imad-2016-app/blob/9c1b8d4b16877619388ef0861fc169ea3bc2a2d9/ui/myform1.php" method="post">
+        <form action="myform1.php" method="post">
             Which is your favorite movie?
             <input type="text" name="formMovie" maxlength="50" value="<?=$varMovie;?>">
          
