@@ -37,7 +37,7 @@ var commentbody2=c1(data);
         </head>
         <body>
          
-        <form action="?action=save" name="myform" method="post">
+        <form action="?action=save" method="post">
             <input type=text name="mytext">
             <input type="submit" value="save">
         </form>
