@@ -26,25 +26,14 @@ function c1(input1){
 
 var commentbody2=c1(data);
     var htmlTemplate = `
-    <?php
-    $action = $_GET["action"];
-    $myText = $_POST["mytext"];
-    ?>
     
     <html>
         <head>
 
         </head>
         <body>
-         
-        
-        <form action="?action=save" name="myform" method="post">
-            <input type=text name="mytext">
-            <input type="submit" value="save">
-        </form>
             <div>
                 <p>${commentbody2}</p>
-                <p>${myText}</p>
             </div>
         </body>
     </html>
