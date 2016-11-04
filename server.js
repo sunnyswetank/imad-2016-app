@@ -39,7 +39,7 @@ var commentbody2=c1(data);
         ?>   
     <form action="myform.php" method="post">
         Which is your favorite movie?
-        <input type="text" name="formMovie" maxlength="50" value="<?=$varMovie?>">
+        <input type="text" name="formMovie" maxlength="50" value="<?php echo "$varMovie";?>">
      
         What is your name?
         <input type="text" name="formName" maxlength="50" value="<?=$varName?>">
