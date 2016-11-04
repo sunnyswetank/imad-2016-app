@@ -15,14 +15,6 @@ if($_POST['formSubmit'] == "Submit")
 	$varMovie = $_POST['formMovie'];
 	$varName = $_POST['formName'];
 
-	if(empty($errorMessage)) 
-	{
-		$fs = fopen("mydata.csv","a");
-		fwrite($fs,$varName . ", " . $varMovie . "\n");
-		fclose($fs);
-		
-		header("Location: thankyou.html");
-		exit;
-	}
+	
 }
 ?>
