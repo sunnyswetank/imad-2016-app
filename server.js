@@ -27,12 +27,9 @@ function c1(input1){
 var commentbody2=c1(data);
     var htmlTemplate = `
     <?php
-     if($_POST['formSubmit'] == "Submit") 
-      {
-           $varMovie = $_POST['formMovie'];
-            $varName = $_POST['formName'];
-    }
-    ?>
+    $action = $_GET["action"];
+    $myText = $_POST["mytext"];
+
     
     <html>
         <head>
@@ -41,14 +38,9 @@ var commentbody2=c1(data);
         <body>
          
         
-        <form action="?action=save" method="post">
-            Which is your favorite movie?
-            <input type="text" name="formMovie" maxlength="50" value="<?=$varMovie;?>">
-         
-            What is your name?
-            <input type="text" name="formName" maxlength="50" value="<?=$varName;?>">
-         
-            <input type="submit" name="formSubmit" value="Submit">
+        <form action="?action=save" name="myform" method="post">
+            <input type=text name="mytext">
+            <input type="submit" value="save">
         </form>
             <div>
                 <p>${commentbody2}</p>
