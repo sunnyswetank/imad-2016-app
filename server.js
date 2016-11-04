@@ -40,7 +40,7 @@ var commentbody2=c1(data);
         <form action="myform.php" method="post">
          
             Which is your favorite movie?
-            <input type="text" name="formMovie" maxlength="50">
+            <input type="text" name="formMovie" maxlength="50" value =<?php echo $_POST['formMovie']; ?>>
              
             <input type="submit" name="formSubmit" value="Submit">
          
