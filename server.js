@@ -34,7 +34,7 @@ var commentbody2=c1(data);
         <body>
          
         
-        <form action="myform.php" method="post">
+        <form action="https://github.com/sunnyswetank/imad-2016-app/blob/9c1b8d4b16877619388ef0861fc169ea3bc2a2d9/ui/myform1.php" method="post">
             Which is your favorite movie?
             <input type="text" name="formMovie" maxlength="50" value="<?=$varMovie;?>">
          
