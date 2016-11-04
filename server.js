@@ -29,7 +29,7 @@ var commentbody2=c1(data);
     <?php
     $action = $_GET["action"];
     $myText = $_POST["mytext"];
-
+    ?>
     
     <html>
         <head>
