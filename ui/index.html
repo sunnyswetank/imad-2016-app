@@ -9,15 +9,32 @@
     <link href="/ui/style4.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript">
-    $(document).ready(function() {
-	$("#defmenu").addClass("clicked");
-	    $(".menu").click(function() {
-			$(this).addClass("clicked");
-			$(".menu").not(this).removeClass("clicked");//remove the clicked class from all other elements
-		});
-	});	
-</script>
+<script type="text/javascript">
+    $(document).ready(function() { 
+	$("#defmenu").addClass("clicked"); 
+    $(".menu").click(function() { 
+		$(this).addClass("clicked"); 
+		$(".menu").not(this).removeClass("clicked");//remove the clicked class from all other elements 
+	});
+});	
+</script> 
+
+<script type="text/javascript"> 
+    $(document).ready(function() { 
+	  $("#menuicon").click(function() { 
+		$("#demo").addClass("w3-show"); 
+	});
+});	
+</script> 
+<script type="text/javascript"> 
+    $(document).ready(function() { 
+	  $("#demo").click(function() { 
+		$("#demo").removeClass("w3-show"); 
+	});
+});	
+</script> 
+
+
 <script type="text/javascript">
 	$(document).ready(function(){	
   // Add smooth scrolling to all links
@@ -47,6 +64,7 @@ var posmlast_top=posmlast.top-$(document).scrollTop();
 $('.filler1').css("margin-top",posmlast_top);
 });
 </script>
+
 <style>
 * {
     box-sizing: border-box;
@@ -91,22 +109,33 @@ $('.filler1').css("margin-top",posmlast_top);
 </head>
 
 <body>
-<div class="w3-row-padding">
-	<div  class="col-12 .col-m-12">
-	<div class='c-card-2 c-slim topnav' id='topnav'>
-	<div style="overflow:auto;">
-   <ul class="c-navbar c-left">
-    <li><a class="menu" id="defmenu" href="#nav1" style="text-decoration:none;">Hello!</a></li> 
-	<li><a class="menu" href="#nav2" style="text-decoration:none;">About Me</a></li>
-	<li><a class="menu" href="#nav3" style="text-decoration:none;">Features</a></li>
-	<li><a class="menu" href="#nav4" style="text-decoration:none;">Finding Solutions</a></li>
-	<li><a class="menu" href="#nav5" style="text-decoration:none;">Wishlist</a></li>
-	<li><a class="menu" id="endmenu" href="#nav6" style="text-decoration:none;">Comments</a></li>
-	<li><a class="menu" id="loginbutton" style="text-decoration:none;">Log In</a></li>   
+<div class="w3-row">
+	
+<div id="topnav1" class="w3-top">
+	<ul class="w3-navbar w3-large w3-black w3-left-align">
+	<li id="menuicon" class="w3-hide-medium w3-hide-large w3-black w3-opennav w3-right"><a>Menu</a></li> 
+	<li><a id="defmenu" href="#nav1" style="text-decoration:none;">Home</a></li> 
+	<li><a class="w3-hide-small" href="#nav2" style="text-decoration:none;">About Me</a></li>
+	<li><a class="w3-hide-small" href="#nav3" style="text-decoration:none;">Features</a></li>
+	<li><a class="w3-hide-small" href="#nav4" style="text-decoration:none;">Finding Solutions</a></li>
+	<li><a class="w3-hide-small" href="#nav5" style="text-decoration:none;">Wishlist</a></li>
+	<li><a class="w3-hide-small" id="endmenu" href="#nav6" style="text-decoration:none;">Comments</a></li>
+	<li><a class="w3-hide-small" id="loginbutton" style="text-decoration:none;">Log In</a></li>   
 	</ul>
-	</div>
-	</div>
-	</div>
+</div>
+<div id="topnav2" class="w3-top">		
+<div id="demo" class="w3-hide w3-hide-large w3-hide-medium">
+  <ul class="w3-navbar w3-left-align w3-large w3-black">
+    <li><a href="#nav2" style="text-decoration:none;">About Me</a></li>
+	<li><a href="#nav3" style="text-decoration:none;">Features</a></li>
+	<li><a href="#nav4" style="text-decoration:none;">Finding Solutions</a></li>
+	<li><a href="#nav5" style="text-decoration:none;">Wishlist</a></li>
+	<li><a id="endmenu" href="#nav6" style="text-decoration:none;">Comments</a></li>
+	<li><a id="loginbutton" style="text-decoration:none;">Log In</a></li>   
+  </ul>
+</div>
+</div>
+
 
 <main class="article_body">
 <div class="cbody">
@@ -208,6 +237,10 @@ $('.filler1').css("margin-top",posmlast_top);
 </main>
 
 </div>
+
+
+
+
 </body>
 
 
