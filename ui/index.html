@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>
       Welcome to Sunny's App
     </title>
-    <link href="/ui/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/cssv4.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
     $(document).ready(function() {
@@ -44,13 +47,54 @@ var posmlast_top=posmlast.top-$(document).scrollTop();
 $('.filler1').css("margin-top",posmlast_top);
 });
 </script>
+<style>
+* {
+    box-sizing: border-box;
+}
 
+[class*="col-"] {
+    width: 100%;
+	float: left;
+    padding: 15px;
+}
+@media only screen and (min-width: 600px) {
+    
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
 
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+</style>
 </head>
 
 <body>
-<div class='c-card-2 c-slim topnav' id='topnav'>
-  <div style="overflow:auto;">
+<div class="w3-row-padding">
+	<div  class="col-12 .col-m-12">
+	<div class='c-card-2 c-slim topnav' id='topnav'>
+	<div style="overflow:auto;">
    <ul class="c-navbar c-left">
     <li><a class="menu" id="defmenu" href="#nav1" style="text-decoration:none;">Hello!</a></li> 
 	<li><a class="menu" href="#nav2" style="text-decoration:none;">About Me</a></li>
@@ -62,7 +106,9 @@ $('.filler1').css("margin-top",posmlast_top);
 	</ul>
 	</div>
 	</div>
+	</div>
 
+<main class="article_body">
 <div class="cbody">
 
 <div id="container1">
@@ -152,13 +198,17 @@ $('.filler1').css("margin-top",posmlast_top);
     <h2>
       If you don't comment here, something bad will happen!
     </h2>
-    <p class="pvalid"> Please log in to make a comment. </p>
-    <p id="comments1" class="pvalid">
-     <iframe src="http://sunnyswetank.imad.hasura-app.io/nav7" width="700px" height="400px"></iframe>
+    <p class="pvalid">
+     <iframe src="http://www.w3schools.com/" width="700px" height="400px"></iframe>
     </p>
     
     </div>
 	</div>
 </div>	
+</main>
+
+</div>
 </body>
+
+
 </html>
