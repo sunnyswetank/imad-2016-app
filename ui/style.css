@@ -41,7 +41,6 @@ h1,h2,h3{
 .c-navbar li a,.w3-navitem{
 	display:block;padding:8px 16px;color:white;
 	}
-
 h1,h2,h3,h4,h5,h6,.c-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
 .menu.clicked {background-color: #4CAF50;}
 .filler1{
