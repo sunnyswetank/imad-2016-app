@@ -38,7 +38,7 @@ h1,h2,h3{
 .c-navbar li{
 	float:left;
 	}
-.c-right{float:right}	
+#loginbutton {float:right}
 .c-navbar li a,.w3-navitem{
 	display:block;padding:8px 16px;color:white;
 	}
