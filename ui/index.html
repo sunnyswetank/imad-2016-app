@@ -6,7 +6,7 @@
       Welcome to Sunny's App
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/ui/style4.css" type="text/css" rel="stylesheet">
+    <link href="/css4.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -59,9 +59,10 @@
 </script>
 <script type="text/javascript">
  $(document).ready(function(){
-var posmlast=$('#endmenu').offset();
-var posmlast_top=posmlast.top-$(document).scrollTop();
-$('.filler1').css("margin-top",posmlast_top);
+var height1=$('#defmenu').height();
+var height2=$('#topnav1').height();
+var height3=Math.max(height1,height2);
+$('.filler1').css("margin-top",height3);
 });
 </script>
 
@@ -114,23 +115,23 @@ $('.filler1').css("margin-top",posmlast_top);
 <div id="topnav1" class="w3-top">
 	<ul class="w3-navbar w3-large w3-black w3-left-align">
 	<li id="menuicon" class="w3-hide-medium w3-hide-large w3-black w3-opennav w3-right"><a>Menu</a></li> 
-	<li><a id="defmenu" href="#nav1" style="text-decoration:none;">Home</a></li> 
-	<li><a class="w3-hide-small" href="#nav2" style="text-decoration:none;">About Me</a></li>
-	<li><a class="w3-hide-small" href="#nav3" style="text-decoration:none;">Features</a></li>
-	<li><a class="w3-hide-small" href="#nav4" style="text-decoration:none;">Finding Solutions</a></li>
-	<li><a class="w3-hide-small" href="#nav5" style="text-decoration:none;">Wishlist</a></li>
-	<li><a class="w3-hide-small" id="endmenu" href="#nav6" style="text-decoration:none;">Comments</a></li>
+	<li><a id="defmenu" href="#container1" style="text-decoration:none;">Home</a></li> 
+	<li><a class="w3-hide-small" href="#container2" style="text-decoration:none;">About Me</a></li>
+	<li><a class="w3-hide-small" href="#container3" style="text-decoration:none;">Features</a></li>
+	<li><a class="w3-hide-small" href="#container4" style="text-decoration:none;">Finding Solutions</a></li>
+	<li><a class="w3-hide-small" href="#container5" style="text-decoration:none;">Wishlist</a></li>
+	<li><a class="w3-hide-small" id="endmenu" href="#container6" style="text-decoration:none;">Comments</a></li>
 	<li><a class="w3-hide-small" id="loginbutton" style="text-decoration:none;">Log In</a></li>   
 	</ul>
 </div>
 <div id="topnav2" class="w3-top">		
 <div id="demo" class="w3-hide w3-hide-large w3-hide-medium">
   <ul class="w3-navbar w3-left-align w3-large w3-black">
-    <li><a href="#nav2" style="text-decoration:none;">About Me</a></li>
-	<li><a href="#nav3" style="text-decoration:none;">Features</a></li>
-	<li><a href="#nav4" style="text-decoration:none;">Finding Solutions</a></li>
-	<li><a href="#nav5" style="text-decoration:none;">Wishlist</a></li>
-	<li><a id="endmenu" href="#nav6" style="text-decoration:none;">Comments</a></li>
+    <li><a href="#container2" style="text-decoration:none;">About Me</a></li>
+	<li><a href="#container3" style="text-decoration:none;">Features</a></li>
+	<li><a href="#container4" style="text-decoration:none;">Finding Solutions</a></li>
+	<li><a href="#container5" style="text-decoration:none;">Wishlist</a></li>
+	<li><a id="endmenu" href="#container6" style="text-decoration:none;">Comments</a></li>
 	<li><a id="loginbutton" style="text-decoration:none;">Log In</a></li>   
   </ul>
 </div>
@@ -140,8 +141,8 @@ $('.filler1').css("margin-top",posmlast_top);
 <main class="article_body">
 <div class="cbody">
 
-<div id="container1">
-<div id="nav1" class="m-section">
+<div id="container1" class="w3-container">
+<div id="nav1" class="m-section filler1">
 	<div class="filler1"><p></p></div>
 	<h1>
       Hello World!
@@ -155,8 +156,8 @@ $('.filler1').css("margin-top",posmlast_top);
 	</div>
 	</div>	
 
-<div id="container2">    
-<div id="nav2" class="m-section">
+<div id="container2" class="w3-container">    
+<div id="nav2" class="m-section filler1">
 	<div class="filler1"><p></p></div>
 	<h2>
       Who am I? Like really?
@@ -169,8 +170,8 @@ $('.filler1').css("margin-top",posmlast_top);
 	</div>
 	</div>
 
-<div id="container3">
-<div id="nav3" class="m-section">
+<div id="container3" class="w3-container">
+<div id="nav3" class="m-section filler1">
 	<div class="filler1"><p></p></div>
     <h2>
       What does this webapp do?
@@ -190,8 +191,8 @@ $('.filler1').css("margin-top",posmlast_top);
 	</div>
 	</div>
 	
-<div id="container4">
-<div id="nav4" class="m-section">
+<div id="container4" class="w3-container">
+<div id="nav4" class="m-section filler1">
 	<div class="filler1"><p></p></div>
 	<h2>
       Living a hunter-gatherer life
@@ -209,8 +210,8 @@ $('.filler1').css("margin-top",posmlast_top);
     </div>
     </div>
     
-<div id="container5">
-<div id="nav5" class="m-section">
+<div id="container5" class="w3-container">
+<div id="nav5" class="m-section filler1">
 	<div class="filler1"><p></p></div>
 	<h2>
       The perfect is the enemy of the good!
@@ -221,8 +222,8 @@ $('.filler1').css("margin-top",posmlast_top);
 	</div>
 	</div>
 	
-<div id="container6">	
-<div id="nav6" class="m-section">
+<div id="container6" class="w3-container">	
+<div id="nav6" class="m-section filler1">
 	<div class="filler1"><p></p></div>
     <h2>
       If you don't comment here, something bad will happen!
