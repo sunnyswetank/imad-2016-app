@@ -1,8 +1,8 @@
-function loadLoginForm () {
-    var loginHtml = ` 
+//function loadLoginForm () {
+//    var loginHtml = ` 
            
-        `;
-    document.getElementById('login_area').innerHTML = loginHtml;
+//        `;
+//    document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
     var submit = document.getElementById('login_btn');
