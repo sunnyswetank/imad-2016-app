@@ -334,7 +334,46 @@ Once I had the menu selection and section navigation piece working, I spent some
 	<p class="pvalid">You need to log in order to comment below. You don't need to log in to read these comments though!</p>
 	</div>
 	<div id="login_area">
-progress here
+    <div class="logbuttons">
+    <button onclick="document.getElementById('id01').style.display='block'" id="button21" class="w3-btn w3-green w3-large">Register</button>
+	<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close">&times;</span>
+         </div>
+
+         <div class="w3-section">
+          <label><b>Username</b></label>
+          <input id="username" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Pick a cool username" name="usrname" required>
+          <label><b>Password</b></label>
+          <input id="password" class="w3-input w3-border" type="password" placeholder="Select a safe password" name="psw" required>
+          <button id="register_btn" class="w3-btn-block w3-green w3-section w3-padding" type="submit">Register</button>
+          </div>
+      
+      </div>
+  </div>
+    
+    <button onclick="document.getElementById('id02').style.display='block'" id="button22" class="w3-btn w3-green w3-large">Login</button>
+	<div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close">&times;</span>
+        </div>
+
+          <div class="w3-section">
+          <label><b>Username</b></label>
+          <input id="username" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+          <label><b>Password</b></label>
+          <input id="password" class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+          <button id="submit_btn" class="w3-btn-block w3-green w3-section w3-padding" type="submit">Login</button>
+           </div>
+      
+    </div>
+  </div>
+</div> 
+
 </div>
   <p class="pvalid">
      <iframe src="http://sunnyswetank.imad.hasura-app.io/nav6" id="frame1"></iframe>
