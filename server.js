@@ -43,6 +43,7 @@ var commentbody2=c1(data);
          <h4>Post a comment</h4>
               <div id="comment_form">
               </div>
+              <hr/>
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
