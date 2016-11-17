@@ -83,7 +83,7 @@ function loadLoginForm () {
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-        <h6 class="pvalid"> Hello <i>${username}</i>! Why don't you drop a comment below!!</h6>
+        <p class="pvalid"> Hello <i>${username}</i>! Why don't you drop a comment below!!</p>
         <a href="/logout">Logout</a>
     `;
 }
