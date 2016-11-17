@@ -1,3 +1,5 @@
+console.log('loaded');
+
 var submit =  document.getElementById('submit_btn');
 submit.onclick=function(){
 	
@@ -9,7 +11,7 @@ submit.onclick=function(){
 		if(request.readyState===XMLHttpRequest.DONE){
 			//take some action 
 			if (request.status===200){
-				alert('Logged in successfully')
+				alert('Logged in successfully');
 			} else if(request.status===403){
 				alert('Username/Password is incorrect');
 			} else if(request.status===500){
