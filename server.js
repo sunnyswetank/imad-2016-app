@@ -42,6 +42,7 @@ var commentbody2=c1(data);
             <div>
                 <p>${commentbody2}</p>
             </div>
+             <script type="text/javascript" src="/ui/comment.js"></script>
         </body>
     </html>
     ` ;
