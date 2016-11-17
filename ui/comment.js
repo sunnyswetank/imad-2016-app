@@ -1,5 +1,3 @@
-var currentArticleTitle = window.location.pathname.split('/')[2];
-
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
@@ -33,7 +31,7 @@ function loadCommentForm () {
         
         // Make the request
         var comment = document.getElementById('comment_text').value;
-        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
+        request.open('POST', 'http://sunnyswetank.imad.hasura-app.io/nav6', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
@@ -93,7 +91,5 @@ function loadComments () {
     request.send(null);
 }
 
-
-// The first thing to do is to check if the user is logged in!
 loadLogin();
 loadComments();
