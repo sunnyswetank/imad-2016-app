@@ -6,7 +6,7 @@
       Welcome to Sunny's App
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/ui/style.css" type="text/css" rel="stylesheet">
+    <link href="cssv4.css" type="text/css" rel="stylesheet">
 	<link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -64,20 +64,72 @@
   });
 });
 </script>
+
 <script type="text/javascript">
  $(document).ready(function(){
 var height1=$('#defmenu').height();
 var height2=$('#topnav1').height();
 var height3=Math.max(height1,height2);
 $('.filler1').css("margin-top",height3);
+var height4=$(window).height();
+var heightc1=$('#container1').height();
+var heightc2=$('#container2').height();
+var heightc3=$('#container3').height();
+var heightc4=$('#container4').height();
+var heightc5=$('#container5').height();
+var heightc6=$('#container6').height();
+ if(height4>heightc1){
+	$('#nav1').css("margin-top",(height4+height3-heightc1)/2);
+  $('#nav1').css("margin-bottom",(height4-heightc1)/2);
+ } else {}
+ 
+ if(height4>heightc2){
+	$('#nav2').css("margin-top",(height4+height3-heightc2)/2);
+  $('#nav2').css("margin-bottom",(height4-heightc2)/2);
+ } else {}
+
+ if(height4>heightc3){
+	$('#nav3').css("margin-top",(height4+height3-heightc3)/2);
+	$('#nav3').css("margin-bottom",(height4-heightc3)/2);
+ } else {} 
+ 
+ if(height4>heightc4){
+	$('#nav4').css("margin-top",(height4+height3-heightc4)/2);
+	  $('#nav4').css("margin-bottom",(height4-heightc4)/2);
+ } else {} 
+
+ if(height4>heightc5){
+	$('#nav5').css("margin-top",(height4+height3-heightc5)/2);
+	  $('#nav5').css("margin-bottom",(height4-heightc5)/2);
+ } else {} 
+ 
+ if(height4>heightc6){
+	$('#nav6').css("margin-top",(height4+height3-heightc6)/2);
+	  $('#nav6').css("margin-bottom",(height4-heightc6)/2);
+ } else {} 
+
 });
 </script>
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-red";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-red", "");
+    }
+}
+</script>
+
 
 <style>
 * {
     box-sizing: border-box;
 }
-
 [class*="col-"] {
     width: 100%;
 	float: left;
@@ -99,7 +151,6 @@ $('.filler1').css("margin-top",height3);
     .col-m-12 {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -116,134 +167,5 @@ $('.filler1').css("margin-top",height3);
 </style>
 </head>
 
-<body>
-<div class="w3-row">
-	
-<div id="topnav1" class="w3-top">
-	<ul class="w3-navbar w3-large w3-black w3-left-align">
-	<li id="menuicon" class="w3-hide-medium w3-hide-large w3-black w3-opennav w3-right"><a>Menu</a></li> 
-	<li><a id="defmenu" href="#container1" style="text-decoration:none;">Home</a></li> 
-	<li><a class="w3-hide-small" href="#container2" style="text-decoration:none;">About Me</a></li>
-	<li><a class="w3-hide-small" href="#container3" style="text-decoration:none;">Features</a></li>
-	<li><a class="w3-hide-small" href="#container4" style="text-decoration:none;">Finding Solutions</a></li>
-	<li><a class="w3-hide-small" href="#container5" style="text-decoration:none;">Wishlist</a></li>
-	<li><a class="w3-hide-small" id="endmenu" href="#container6" style="text-decoration:none;">Comments</a></li>
-	<li><a class="w3-hide-small" id="loginbutton" style="text-decoration:none;">Log In</a></li>   
-	</ul>
-</div>
-<div id="topnav2" class="w3-top">		
-<div id="demo" class="w3-hide w3-hide-large w3-hide-medium">
-  <ul class="w3-navbar w3-left-align w3-large w3-black">
-    <li><a href="#container2" style="text-decoration:none;">About Me</a></li>
-	<li><a href="#container3" style="text-decoration:none;">Features</a></li>
-	<li><a href="#container4" style="text-decoration:none;">Finding Solutions</a></li>
-	<li><a href="#container5" style="text-decoration:none;">Wishlist</a></li>
-	<li><a id="endmenu" href="#container6" style="text-decoration:none;">Comments</a></li>
-	<li><a id="loginbutton" style="text-decoration:none;">Log In</a></li>   
-  </ul>
-</div>
-</div>
 
-
-<main class="article_body">
-<div class="cbody">
-
-<div id="container1" class="w3-container">
-<div id="nav1" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-	<h2 class="secheader">
-      Hello World!
-    </h2>
-    <p class="pvalid">
-         Welcome to the very first (and I certainly hope not the last) webapp that I have built. I would like to thank the imad team for organizing the course. The course was very useful in getting a broad view of the process of webapp development and the various components that form a typical webapp. The examples, illustrations and practical modules were very easy to follow and in fact, this website has utilized many of the things done in the practical modules. 
-        <br/>
-        <br/>
-        What you see here is an (humble) attmept to build on the knowledge gained through the course and make a simple webapp that tells the story of a webapp - its own story. It's a metaapp!
-    </p>
-	</div>
-	</div>	
-
-<div id="container2" class="w3-container">    
-<div id="nav2" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-	<h2 class="secheader">
-      Who am I? Like really?
-    </h2>
-    <p class="pvalid">
-      I am a Data Miner by profession. I work with raw datasets (e-commerce transactions, product reviews, travel bookings etc.) to find actionable insights. Most of these insights are predictions with an associated probability/confidence level. For example, in case of revenue management for a hotel, I may be asked to predict the demand for a given day or I may have to assess the likelihood that a customer will cancel his/her booking. If I am working with an e-commerce client, the client may be interesting in finding the best product recommendations for their customers. On the other hand, a bank may be interested in discovering a set of customers from its existing customer base who are most likely to adopt a recently launched premium travel credit card.<br/>
-      <br/>
-      I am sure you are familiar with some of these problem statements/ use cases. Very often, to present the results of my analysis, I have to do some kind of visualization as well to highlight the most important results. For analysis, I generally use a mix of R, SAS, Hive (on Hadoop) and for visualisation and presentation I may use PowerPoint or Tableau (usually when a live dashboard needs to be built).
-    </p>
-	</div>
-	</div>
-
-<div id="container3" class="w3-container">
-<div id="nav3" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-    <h2 class="secheader">
-      What does this webapp do?
-    </h2>
-    <div class="pvalid">I wanted this version of the webapp to have the follwoing features 
-    <ul>
-        <li>A menu bar on the top listing and linked to different sections (fixed in position)</li>
-	    <li>Clicking any menu option should highlight the selection</li>
-        <li>The clicked section should scroll up/down to the top of the page just below the menu bar </li>
-        <li>The section should scroll up/down in the same amount of time each time a menu option is clicked</li>
-        <li>A comments section where any user can add a comment</li> 
-        <li>This comment sections should be able to store all comments added by users in a database</li>
-        <li>A log in functionality for visitors to register themselves on the app</li>
-        <li>Show number of likes, dislikes for comments and provide option of sorting comments by date, likes etc.</li>
-        </ul>
-    </div>    
-	</div>
-	</div>
-	
-<div id="container4" class="w3-container">
-<div id="nav4" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-	<h2 class="secheader">
-      Living a hunter-gatherer life
-    </h2>
-    <p class="pvalid">
-        After going through the list in the previous section, I realized that the top half of the features was about serving static content and the lower half was about serving dynamic content using a significant degree of user-inputs. I decided to finish the static section first - including writing this content which you are currently reading.
-        <br/>
-        <br/>
-        I have used jquery to achieve selection highlighting and page scrolling effect. I strarted off by searching for solutions for these problems on the net and realized that using jquery was probably the easy answer since that was the predominant approach in most of the answers. I did a quick course in jquery on codeacademy to understand basic synatax and functions. 
-        <br/>
-        <br/>
-        After some trial and error with bits of code from different places (mostly answers to problems on stackoverflow), I was able to ahcieve my objectives with few lines of code in jquery.You can find them in the source of this page. I have added comments for convenience. <br/> Once I had this menu seclection and section navigation piece working, I spent some time on enhancing readability and aesthetic appeal (as much as my limited deisgn sensibilites would permit)
-        
-    </p>
-    </div>
-    </div>
-    
-<div id="container5" class="w3-container">
-<div id="nav5" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-	<h2 class="secheader">
-      The perfect is the enemy of the good!
-    </h2>
-    <p class="pvalid">
-      The feature list in the earlier section talks about only those features which I could implement in the current version. For clarity, I have not included all the desire features with which I started out. So, this section lists some of the features which I wanted to work on but had to shelve as they were too ambitious or trivial but proving to be a roadblock  
-    </p>
-	</div>
-	</div>
-	
-<div id="container6" class="w3-container">	
-<div id="nav6" class="m-section filler1">
-	<div class="filler1"><p></p></div>
-    <h2 class="secheader">
-      If you don't comment here, something bad will happen!
-    </h2>
-    <p class="pvalid">
-     <iframe src="http://www.w3schools.com/"></iframe>
-    </p>
-    
-    </div>
-	</div>
-</div>	
-</main>
-
-</div>
-</body>
 </html>
