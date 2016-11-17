@@ -42,6 +42,11 @@ var commentbody2=c1(data);
         
          <h4>Post a comment</h4>
               <div id="comment_form">
+              <h5>Submit a comment</h5>
+        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
+        <br/>
+        <input type="submit" id="submit" value="Submit" />
+        <br/>
               </div>
               <hr/>
               <div id="comments">
