@@ -4,7 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
-
+var session = require('express-session');
 
 var config={
     user:'sunnyswetank',
@@ -13,9 +13,15 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
+
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
+
 
 function createTemplate(data){
 var commentbody=('');
