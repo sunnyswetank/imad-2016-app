@@ -84,7 +84,7 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <p class="secheader"> Hello <i>${username}</i>! Why don't you drop a comment below!!</p>
-        <a href="/logout">Logout</a>
+        <a class="secheader" href="/logout">Logout</a>
     `;
 }
 
