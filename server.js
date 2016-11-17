@@ -35,6 +35,7 @@ function c1(input1){
 
 var commentbody2=c1(data);
     var htmlTemplate = `
+       <!doctype html>
        <html>
         <head>
         </head>
