@@ -89,16 +89,18 @@ app.get('/ui/comment.js', function (req, res) {
 });
 
 
-function hash(input, salt){
-	//how do we create a hash?
-	var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-	return ["pkdbf2","10000",salt, hashed.toString('hex')].join('$');
+function hash (input, salt) {
+    // How do we create a hash?
+    var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+    return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
 }
+
 
 app.get('/hash/:input', function(req, res) {
    var hashedString = hash(req.params.input, 'this-is-some-random-string');
    res.send(hashedString);
 });
+
 app.post('/create-user', function (req, res) {
    // username, password
    // {"username": "tanmai", "password": "password"}
@@ -115,6 +117,7 @@ app.post('/create-user', function (req, res) {
       }
    });
 });
+
 app.post('/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
@@ -167,21 +170,7 @@ app.get('/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
-
 var pool = new Pool(config);
-
-app.get('/get-articles', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
