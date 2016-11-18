@@ -35,23 +35,14 @@ function c1(input1){
 
 var commentbody2=c1(data);
     var htmlTemplate = `
-       <!doctype html>
-       <html>
+        <html>
         <head>
         </head>
         <body>
-        
-             <div id="comment_form">
-               </div>
-              <hr/>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
-        
-            <div>
+        <div>
                 <p>${commentbody2}</p>
             </div>
-             <script type="text/javascript" src="/ui/main.js"></script>
+             <script type="text/javascript" src="/ui/comment.js"></script>
         </body>
     </html>
     ` ;
