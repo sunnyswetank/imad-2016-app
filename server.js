@@ -93,6 +93,10 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.get('/ui/comment.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'comment.js'));
+});
+
 
 function hash(input, salt){
 	//how do we create a hash?
