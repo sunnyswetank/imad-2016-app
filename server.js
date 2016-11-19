@@ -42,7 +42,7 @@ var commentbody2=c1(data);
         <div id="comment_form">
               </div>
               <div id="comments">
-                <center>Loading comments...</center>
+                <center>People have been talking</center>
               </div>
         <div>
                 <p>${commentbody2}</p>
