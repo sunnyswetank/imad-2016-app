@@ -29,4 +29,4 @@ function loadLogin () {
 
 
 loadLogin();
-location.reload();
+
