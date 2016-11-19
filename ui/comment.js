@@ -1,7 +1,7 @@
 function loadCommentForm () {
     var commentFormHtml = `
-        <h5>Submit a comment</h5>
-        <textarea id="comment_text" placeholder="Enter your comment here..."></textarea>
+        <h3 class="secheader">Submit a comment</h3>
+        <textarea id="comment_text" class="pvalid" placeholder="Enter your comment here..."></textarea>
         <br/>
         <input type="submit" id="submit" value="Submit" />
         <br/>
