@@ -39,9 +39,7 @@ var commentbody2=c1(data);
         <head>
         </head>
         <body>
-        <div id="comment_form">
-              </div>
-              <div id="comments">
+          <div id="comments">
                 <center>People have been talking</center>
               </div>
         <div>
