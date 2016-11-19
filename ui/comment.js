@@ -32,9 +32,6 @@ function loadLogin () {
 
 loadLogin();
 
-$(document).ready(function() {
-  $('#frame1').load(function(){
-    document.getElementById('frame1').contentDocument.location.reload(true);
-  });
-});
+var iframe = document.getElementById('frame1');
+iframe.src = iframe.src;
 
