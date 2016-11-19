@@ -19,6 +19,8 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadCommentForm(this.responseText);
+                var test = document.getElementById('frame1');
+                test.src = iframe.src;
                 
             }
         }
