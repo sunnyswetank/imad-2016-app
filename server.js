@@ -171,7 +171,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
-   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+   res.send('http://sunnyswetank.imad.hasura-app.io/#container6');
 });
 var pool = new Pool(config);
 
