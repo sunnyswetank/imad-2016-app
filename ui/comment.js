@@ -32,6 +32,3 @@ function loadLogin () {
 
 loadLogin();
 
-var iframe = document.getElementById('frame1');
-iframe.src = iframe.src;
-
