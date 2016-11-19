@@ -39,8 +39,6 @@ var commentbody2=c1(data);
         <head>
         </head>
         <body>
-        	<div id="login_area">
-</div>
         <div id="comment_form">
               </div>
               <div id="comments">
