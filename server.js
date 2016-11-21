@@ -176,6 +176,26 @@ app.get('/logout', function (req, res) {
 
 var pool = new Pool(config);
 
+app.post('/submit-comment', function (req, res) {
+   // Check if the user is logged in
+    if (req.session && req.session.auth && req.session.auth.userId) {
+                    // Now insert the right comment for this article
+                    pool.query(
+                        "INSERT INTO comment (comment,  user_id) VALUES ($1, $2)",
+                        [req.body.comment, req.session.auth.userId],
+                        function (err, result) {
+                            if (err) {
+                                res.status(500).send(err.toString());
+                            } else {
+                                res.status(200).send('Comment inserted!');
+                            }
+                            
+                        });
+    } else {
+        res.status(403).send('Only logged in users can comment');
+    }
+});
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
