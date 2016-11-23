@@ -179,7 +179,7 @@ var pool = new Pool(config);
 app.get('/get-comments', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT * FROM comment', function (err, result) {
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp DESC', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
