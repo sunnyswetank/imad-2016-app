@@ -176,6 +176,18 @@ app.get('/logout', function (req, res) {
 
 var pool = new Pool(config);
 
+app.get('/get-comments', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM comment', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
 app.post('/submit-comment', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
