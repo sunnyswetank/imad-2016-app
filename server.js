@@ -22,16 +22,50 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
-
 function createTemplate(data){
-var commentbody=('');
-function c1(input1){
-        for(var i=0;i<input1.length;i=i+1){
-        commentbody+='<hr/>'+input1[i].commentbody;
-         }
-        return commentbody; 
-} }    
-
+ var commentbody=('');
+ function c1(input1){
+         for(var i=0;i<input1.length;i=i+1){
+         commentbody+='<hr/>'+input1[i].commentbody;
+          }
+         return commentbody; 
+  }  
+var commentbody2=c1(data);
+     var htmlTemplate = `
+         <html>
+         <head>
+         </head>
+         <body>
+           <div id="comments">
+                 <center>People have been talking</center>
+               </div>
+         <div>
+                 <p>${commentbody2}</p>
+             </div>
+              <script type="text/javascript" src="/ui/comment.js"></script>
+         </body>
+     </html>
+     ` ; 
+     return htmlTemplate;
+}     
+ 
+ var pool = new Pool(config);
+ app.get('/nav6',function(req,res){
+     
+     pool.query('select commentbody from comments',function(err,result){
+     if(err){
+      res.status(500).send(err.toString());   
+     } else{
+      if(result.rows.length===0){
+          res.status(404).send("No comments yet");
+      } else{
+     var articleData=result.rows;         
+     res.send(createTemplate(articleData));
+     //res.send(JSON.stringify(result.rows));
+     }  
+    }   
+    });
+ });
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -49,6 +83,9 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.get('/ui/comment.js', function (req, res) {
+   res.sendFile(path.join(__dirname, 'ui', 'comment.js'));
+});
 
 function hash (input, salt) {
     // How do we create a hash?
@@ -146,18 +183,6 @@ app.get('/get-comments', function (req, res) {
    // make a select request
    // return a response with the results
    pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp DESC', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-
-app.get('/get-oldest', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
