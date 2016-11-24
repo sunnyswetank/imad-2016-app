@@ -182,7 +182,7 @@ var pool = new Pool(config);
 app.get('/get-comments', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp DESC', function (err, result) {
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id and comment.comment_length>0 order by comment.timestamp DESC', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -194,7 +194,7 @@ app.get('/get-comments', function (req, res) {
 app.get('/get-oldest', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp', function (err, result) {
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id and comment.comment_length>0 order by comment.timestamp', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -206,7 +206,7 @@ app.get('/get-oldest', function (req, res) {
 app.get('/get-latest', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp desc', function (err, result) {
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id and comment.comment_length>0 order by comment.timestamp desc', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -218,7 +218,7 @@ app.get('/get-latest', function (req, res) {
 app.get('/get-longest', function (req, res) {
    // make a select request
    // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp', function (err, result) {
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id and comment.comment_length>0 order by comment.comment_length desc', function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
