@@ -169,7 +169,7 @@ function loadComments () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}<br>
                             <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like()</button>
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
@@ -203,7 +203,7 @@ function loadOldest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br>
                             <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like()</button>
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
@@ -237,7 +237,7 @@ function loadLatest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br>
                             <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like()</button>
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
@@ -271,7 +271,7 @@ function loadLongest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br>
                             <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like()</button>
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
