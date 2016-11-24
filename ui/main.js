@@ -84,7 +84,7 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <p class="secheader"> Hello <i>${username}</i>! Why don't you drop a comment below!!</p>
-        <a class="secheader" href="/logout">Logout</a>
+        
     `;
 }
 
@@ -93,7 +93,8 @@ function loadCommentForm () {
     var commentFormHtml = `
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
         <br/>
-        <input type="submit" class="w3-teal" id="submit_comment" value="Submit" />
+        <input type="submit" class="w3-btn w3-small w3-round-xlarge w3-teal" id="submit_comment" value="Submit" />
+        <button id="logout_btn" class="w3-btn w3-small w3-round-xlarge w3-teal"><a href="/logout">Logout</a></button>
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
