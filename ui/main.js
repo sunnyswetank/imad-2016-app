@@ -93,7 +93,7 @@ function loadCommentForm () {
     var commentFormHtml = `
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
         <br/>
-        <input type="submit" class="we-teal" id="submit_comment" value="Submit" />
+        <input type="submit" class="w3-teal" id="submit_comment" value="Submit" />
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
