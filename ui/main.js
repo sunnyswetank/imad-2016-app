@@ -4,8 +4,8 @@ function loadLoginForm () {
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" placeholder="password" />
         <br/><br/>
-          <input type="submit" class="w3-teal" id="register_btn" value="Register" />
-          <input type="submit" class="w3-teal" id="login_btn" value="Login" />
+          <input type="submit" class="w3-btn w3-small w3-round-xlarge w3-teal" id="register_btn" value="Register" />
+          <input type="submit" class="w3-btn w3-small w3-round-xlarge w3-teal" id="login_btn" value="Login" />
         </div>
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
