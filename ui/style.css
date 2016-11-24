@@ -81,3 +81,6 @@
     font-style: italic;
     font-size: 0.8em;
 }
+#logout_btn{
+	float:right;
+}
