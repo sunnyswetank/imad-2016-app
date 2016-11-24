@@ -2,7 +2,7 @@ function loadLoginForm () {
     var loginHtml = `
         <div class="logindiv">
         <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
+        <input type="password" id="password" placeholder="password" />
         <br/><br/>
           <input type="submit" class="w3-teal" id="register_btn" value="Register" />
           <input type="submit" class="w3-teal" id="login_btn" value="Login" />
