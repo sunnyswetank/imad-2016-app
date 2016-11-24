@@ -94,7 +94,7 @@ function loadCommentForm () {
         <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
         <br/>
         <input type="submit" class="w3-btn w3-small w3-round-xlarge w3-teal" id="submit_comment" value="Submit" />
-        <button id="logout_btn" class="w3-btn w3-small w3-round-xlarge w3-teal"><a href="/logout">Logout</a></button>
+        <button id="logout_btn" class="w3-btn w3-small w3-round-xlarge w3-teal"><a href="/logout" style="text-decoration:none;">Logout</a></button>
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
