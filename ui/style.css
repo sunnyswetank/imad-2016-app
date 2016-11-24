@@ -81,6 +81,6 @@
     font-style: italic;
     font-size: 0.8em;
 }
-#logout_btn{
+#logout_btn, #like_btn, #dislike_btn{
 	float:right;
 }
