@@ -30,7 +30,7 @@ function c1(input1){
         commentbody+='<hr/>'+input1[i].commentbody;
          }
         return commentbody; 
-}     
+} }    
 
 
 app.get('/', function (req, res) {
@@ -48,6 +48,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+
 
 function hash (input, salt) {
     // How do we create a hash?
