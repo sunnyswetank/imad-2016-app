@@ -170,10 +170,10 @@ function loadComments () {
                     <div class="comment">
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -204,10 +204,10 @@ function loadOldest () {
                     <div class="comment">
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -238,10 +238,10 @@ function loadLatest () {
                     <div class="comment">
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -272,10 +272,10 @@ function loadLongest () {
                     <div class="comment">
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
