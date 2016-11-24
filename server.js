@@ -33,44 +33,6 @@ function c1(input1){
 }     
 
 
-var commentbody2=c1(data);
-    var htmlTemplate = `
-        <html>
-        <head>
-        </head>
-        <body>
-          <div id="comments">
-                <center>People have been talking</center>
-              </div>
-        <div>
-                <p>${commentbody2}</p>
-            </div>
-             <script type="text/javascript" src="/ui/comment.js"></script>
-        </body>
-    </html>
-    ` ;
-    return htmlTemplate;
-}
-
-var pool = new Pool(config);
-app.get('/nav6',function(req,res){
-    
-    pool.query('select commentbody from comments',function(err,result){
-    if(err){
-     res.status(500).send(err.toString());   
-    } else{
-     if(result.rows.length===0){
-         res.status(404).send("No comments yet");
-     } else{
-    var articleData=result.rows;         
-    res.send(createTemplate(articleData));
-    //res.send(JSON.stringify(result.rows));
-     }  
-    }   
-    });
-});
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -86,11 +48,6 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
-app.get('/ui/comment.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'comment.js'));
-});
-
 
 function hash (input, salt) {
     // How do we create a hash?
@@ -195,31 +152,6 @@ app.get('/get-comments', function (req, res) {
       }
    });
 });
-
-app.get('/get-comments-latest', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp DESC', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-
-app.get('/get-comments-oldest', function (req, res) {
-   // make a select request
-   // return a response with the results
-   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp', function (err, result) {
-      if (err) {
-          res.status(500).send(err.toString());
-      } else {
-          res.send(JSON.stringify(result.rows));
-      }
-   });
-});
-
 
 app.post('/submit-comment', function (req, res) {
    // Check if the user is logged in
