@@ -303,8 +303,7 @@ function loadLike () {
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
-                    document.getElementById('comment_text').value = '';
-                    loadComments();    
+                     
                 } else {
                     alert('Error! Could not like comment');
                 }
@@ -313,7 +312,7 @@ function loadLike () {
         };
         
         // Make the request
-        var comment = document.getElementById('comment_text').value;
+        var like_btn = document.getElementById('like_btn').value;
         request.open('POST', '/submit-like/', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
