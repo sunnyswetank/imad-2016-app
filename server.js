@@ -123,7 +123,7 @@ app.post('/create-user', function (req, res) {
       }
    });
    } else {
-       alert("Please make sure you have not left the username/password field blank!");
+       res.send('Please make sure you have not left the username/password field blank!');
    }
    
    
