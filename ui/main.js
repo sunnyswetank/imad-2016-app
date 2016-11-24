@@ -212,7 +212,7 @@ function loadCommentsoldest () {
         }
     };
     };
-    request.open('GET', '/get-comments-oldest', true);
+    request.open('GET', '/get-oldest', true);
     request.send(null);
 }	
 
