@@ -153,6 +153,19 @@ app.get('/get-comments', function (req, res) {
    });
 });
 
+app.get('/get-oldest', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT comment.*,"user".username from comment,"user" where comment.user_id="user".id order by comment.timestamp DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+
 app.post('/submit-comment', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
