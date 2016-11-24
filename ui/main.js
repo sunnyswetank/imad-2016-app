@@ -170,7 +170,7 @@ function loadComments () {
                     <div class="comment">
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br><br>
-                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like</button>
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like<span>(</button>
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
@@ -289,6 +289,39 @@ function loadLongest () {
     };
 }
 
+function loadLike () {
+   
+    // Submit username/password to login
+    var like_btn = document.getElementById('like_btn');
+    like_btn.onclick = function () {
+        // Create a request object
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+                // Take some action
+                if (request.status === 200) {
+                    // clear the form & reload all the comments
+                    document.getElementById('comment_text').value = '';
+                    loadComments();    
+                } else {
+                    alert('Error! Could not like comment');
+                }
+                like_btn.value = 'Submit';
+          }
+        };
+        
+        // Make the request
+        var comment = document.getElementById('comment_text').value;
+        request.open('POST', '/submit-like/', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({comment: comment}));  
+        like_btn.value = 'Liked';
+        
+    };
+	}
+
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
@@ -296,3 +329,4 @@ loadComments();
 loadOldest();
 loadLatest();
 loadLongest();
+loadLike();
