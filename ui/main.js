@@ -169,9 +169,9 @@ function loadComments () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br><br>
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
@@ -203,9 +203,9 @@ function loadOldest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br><br>
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
@@ -237,9 +237,9 @@ function loadLatest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br><br>
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
@@ -271,9 +271,9 @@ function loadLongest () {
                     content += `<hr>
                     <div class="comment">
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} <br><br>
+                            <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-lightgray">Dislike</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
