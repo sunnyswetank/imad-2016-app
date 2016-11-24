@@ -77,3 +77,7 @@
 #comment_text{
 	width:100%;
 }
+.commenter {
+    font-style: italic;
+    font-size: 0.8em;
+}
