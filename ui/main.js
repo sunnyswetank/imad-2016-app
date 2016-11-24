@@ -167,10 +167,10 @@ function loadComments () {
                      var time = new Date(commentsData[i].timestamp);
                     content += `<hr>
                     <div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
-                        ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -199,10 +199,10 @@ function loadOldest () {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<hr>
                     <div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -231,10 +231,10 @@ function loadLatest () {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<hr>
                     <div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -263,10 +263,10 @@ function loadLongest () {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<hr>
                     <div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
                     </div>`;
                 }
                 comments.innerHTML = content;
