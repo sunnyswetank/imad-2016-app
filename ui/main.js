@@ -172,6 +172,8 @@ function loadComments () {
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -204,6 +206,8 @@ function loadOldest () {
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -236,6 +240,8 @@ function loadLatest () {
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                         <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Like</button>
+	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-gray">Dislike</button>
                     </div>`;
                 }
                 comments.innerHTML = content;
