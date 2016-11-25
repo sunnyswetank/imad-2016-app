@@ -209,6 +209,7 @@ function loadOldest () {
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <script type="text/javascript" src="ui/comment.js"></script>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -243,6 +244,7 @@ function loadLatest () {
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <script type="text/javascript" src="ui/comment.js"></script>
                     </div>`;
                 }
                 comments.innerHTML = content;
@@ -277,6 +279,7 @@ function loadLongest () {
 	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <script type="text/javascript" src="ui/comment.js"></script>
                     </div>`;
                 }
                 comments.innerHTML = content;
