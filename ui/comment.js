@@ -1,33 +1,37 @@
-function loadCommentForm () {
-    var commentFormHtml = `
-        <textarea id="comment_text" class="pvalid" placeholder="Enter your comment here..."></textarea>
-        <br/>
-        <input type="submit" id="submit" value="Submit" />
-        <br/>
-        `;
-    document.getElementById('comment_form').innerHTML = commentFormHtml;
-    
-
-}
-
-
-function loadLogin () {
-    // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                loadCommentForm(this.responseText);
-                
-            }
-        }
+function loadLike(){
+window.onload= function() {
+   
+    // Submit username/password to login
+    var like_btn = document.getElementById('like_btn');
+    like_btn.onclick = function () {
+        // Create a request object
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+                // Take some action
+                if (request.status === 200) {
+                    // clear the form & reload all the comments
+                     var counter=1;
+                } else {
+                    alert('Error! Could not like comment');
+                }
+                like_btn.value = 'Liked';
+          }
+        };
+        
+        // Make the request
+        var like_btn = document.getElementById('like_btn').value;
+        var likes=counter;
+        console.log(counter);
+        request.open('POST', '/submit-like', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({likes: likes}));  
+        like_btn.value = 'Liked';
+        
     };
-    
-    request.open('GET', '/check-login', true);
-    request.send(null);
+	};
 }
 
-
-
-loadLogin();
-
+loadLike();
