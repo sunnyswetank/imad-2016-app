@@ -307,7 +307,7 @@ function loadLike() {
                 } else {
                     alert('Error! Could not like comment');
                 }
-                like_btn.value = 'Submit';
+                like_btn.value = 'Liked';
           }
         };
         
