@@ -185,7 +185,15 @@ function loadComments () {
     
     request.open('GET', '/get-comments', true);
     request.send(null);
+    
+    var like_btn = document.getElementById('like_btn');
+    like_btn.onclick=function(){
+        alert('really');
+    };
+
 }
+
+
 
 function loadOldest () {
         // Check if the user is already logged in
@@ -289,13 +297,6 @@ function loadLongest () {
     };
 }
 
-var like_btn='';
-window.onload = function() {
-    var like_btn = document.getElementById('like_btn');
-    like_btn.onclick=function(){
-        alert('really');
-    }
-}
 
 
 // The first thing to do is to check if the user is logged in!
