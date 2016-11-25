@@ -306,5 +306,5 @@ loadComments();
 loadOldest();
 loadLatest();
 loadLongest();
-loadLike();
+
     
