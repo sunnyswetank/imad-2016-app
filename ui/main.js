@@ -289,7 +289,8 @@ function loadLongest () {
     };
 }
 
-window.onload= function loadLike() {
+function loadLike(){
+window.onload= function() {
    
     // Submit username/password to login
     var like_btn = document.getElementById('like_btn');
@@ -320,8 +321,8 @@ window.onload= function loadLike() {
         like_btn.value = 'Liked';
         
     };
-	}
-
+	};
+}
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
