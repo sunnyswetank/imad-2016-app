@@ -173,8 +173,8 @@ function loadComments () {
                             
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                        <button id="like_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Like()</button>
-	                     <button id="dislike_btn" class="w3-btn w3-small w3-round-xlarge w3-light-grey">Dislike()</button>
+                        <button id="like_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Like()</button>
+	                     <button id="dislike_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Dislike()</button>
 	                     <br>
                         </div>`;
                 }
