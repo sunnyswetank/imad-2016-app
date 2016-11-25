@@ -110,3 +110,15 @@
 	text-align:center;
 }
 }
+#login_container{
+	text-align:center;
+}
+#username{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#password{
+	margin-left:auto;
+	margin-right:auto;
+}
