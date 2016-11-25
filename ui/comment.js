@@ -1,5 +1,4 @@
-function loadLike(){
-window.onload= function() {
+function loadLike() {
    
     // Submit username/password to login
     var like_btn = document.getElementById('like_btn');
@@ -31,7 +30,6 @@ window.onload= function() {
         like_btn.value = 'Liked';
         
     };
-	};
 }
 
 loadLike();
