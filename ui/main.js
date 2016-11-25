@@ -1,6 +1,6 @@
 function loadLoginForm () {
     var loginHtml = `
-        <div class="logindiv">
+        <div class="logindiv w3-container">
         <input type="text" class="login-field-forms" id="username" placeholder="username" />
         <input type="password" class="login-field-forms" id="password" placeholder="password" />
         <br/><br/>
