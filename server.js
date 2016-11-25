@@ -253,7 +253,7 @@ app.post('/submit-like', function (req, res) {
                     // Now insert the right comment for this article
                     pool.query(
                         "INSERT INTO likes (user_id,likes) VALUES ($1, $2)",
-                        [req.session.auth.userId,1],
+                        [req.session.auth.userId,counter],
                         function (err, result) {
                             if (err) {
                                 res.status(500).send(err.toString());
