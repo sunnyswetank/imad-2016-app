@@ -292,7 +292,7 @@ function loadLongest () {
 }
 
 window.onload = function () {
-    document.getElementById('like_btn').onclick= function(){
+    document.getElementById('submit_comment').onclick= function(){
         alert('really')
     };
 };
