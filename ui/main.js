@@ -289,7 +289,7 @@ function loadLongest () {
     };
 }
 
-
+var like_btn='';
 window.onload = function() {
     var like_btn = document.getElementById('like_btn');
     like_btn.onclick=function(){
