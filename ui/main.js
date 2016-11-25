@@ -314,6 +314,7 @@ window.onload= function() {
         
         // Make the request
         var like_btn = document.getElementById('like_btn').value;
+        var likes=counter;
         console.log(counter);
         request.open('POST', '/submit-like', true);
         request.setRequestHeader('Content-Type', 'application/json');
