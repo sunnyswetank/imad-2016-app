@@ -289,7 +289,7 @@ function loadLongest () {
     };
 }
 
-document.getElementById("comments").onload = function() loadLike{
+document.getElementById("comments").onload = function() {
     var like_btn = document.getElementById('like_btn');
     like_btn.onclick=function(){
         alert('really');
@@ -303,4 +303,4 @@ loadComments();
 loadOldest();
 loadLatest();
 loadLongest();
-loadLike();
+
