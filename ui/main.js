@@ -313,6 +313,7 @@ function loadLike() {
         
         // Make the request
         var like_btn = document.getElementById('like_btn').value;
+        console.log(counter);
         request.open('POST', '/submit-like', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({likes: likes}));  
