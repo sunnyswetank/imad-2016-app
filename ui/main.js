@@ -292,7 +292,7 @@ function loadLongest () {
 }
 
 $(document).ready(function() {
-    ("#like_btn").click(function(){
+    $("#like_btn").click(function(){
         alert("really");
     })
 });
