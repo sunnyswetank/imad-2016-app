@@ -289,7 +289,7 @@ function loadLongest () {
     };
 }
 
-function loadLike () {
+function loadLike() {
    
     // Submit username/password to login
     var like_btn = document.getElementById('like_btn');
