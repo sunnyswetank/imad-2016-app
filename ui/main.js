@@ -291,11 +291,6 @@ function loadLongest () {
     };
 }
 
-window.onload = function () {
-    document.getElementById('submit_comment').onclick= function(){
-        alert('really')
-    };
-};
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
