@@ -84,3 +84,27 @@
 #logout_btn, #like_btn, #dislike_btn{
 	float:right;
 }
+@media only screen and (max-width: 500px) {
+   login-field-forms{
+	border-radius:5px;
+	margin-bottom: 2%;
+	display:block;
+	text-align:center;
+}  
+}
+
+@media only screen and (min-width: 600px) {
+    login-field-forms{
+	border-radius:5px;
+	margin-bottom: 2%;
+	display:block;
+	text-align:center;
+}
+}
+@media only screen and (min-width: 768px) {
+   login-field-forms{
+	border-radius:5px;
+	display:inline;
+	text-align:center;
+}
+}
