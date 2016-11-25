@@ -300,5 +300,7 @@ loadLatest();
 loadLongest();
 
 $(document).ready(function(){
-   alert("hello") ;
+   $('#like_btn').click(function(){
+   alert("hello") ;    
+   });
 });
