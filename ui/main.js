@@ -299,8 +299,3 @@ loadOldest();
 loadLatest();
 loadLongest();
 
-window.onload = function () {
-    document.getElementById('like_btn').onclick=function(){
-        alert('really');
-    };
-};
