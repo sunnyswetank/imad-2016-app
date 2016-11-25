@@ -174,7 +174,7 @@ function loadComments () {
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                         <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Like" />
-                        <button id="dislike_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Dislike()</button>
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Disike" />
 	                     <br>
                         </div>`;
                 }
@@ -211,8 +211,8 @@ function loadOldest () {
                             
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                        <button id="like_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Like()</button>
-	                     <button id="dislike_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Dislike()</button>
+                       <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Like" />
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Disike" />
 	                     <br>
                     </div>`;
                 }
@@ -247,8 +247,8 @@ function loadLatest () {
                             
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                        <button id="like_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Like()</button>
-	                     <button id="dislike_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Dislike()</button>
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Like" />
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Disike" />
 	                     <br>
                     </div>`;
                 }
@@ -283,8 +283,8 @@ function loadLongest () {
                             
                         </div>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
-                        <button id="like_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Like()</button>
-	                     <button id="dislike_btn" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey">Dislike()</button>
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Like" />
+                        <input type="submit" class="w3-btn w3-tiny w3-round-xlarge w3-light-grey" id="like_btn" value="Disike" />
 	                     <br>
                     </div>`;
                 }
@@ -299,12 +299,6 @@ function loadLongest () {
     };
 }
 
-function loadLike () {
-    var like_btn = document.getElementById('like_btn');
-    like_btn.onclick = function(){
-        alert('really');
-    };
-}
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
