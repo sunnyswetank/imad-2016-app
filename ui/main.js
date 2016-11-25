@@ -185,12 +185,6 @@ function loadComments () {
     
     request.open('GET', '/get-comments', true);
     request.send(null);
-    
-    var like_btn = document.getElementById('like_btn');
-    like_btn.onclick=function(){
-        alert('really');
-    };
-
 }
 
 
