@@ -289,12 +289,13 @@ function loadLongest () {
     };
 }
 
-function loadLike(){
-    var like_btn=document.getElementById('like_btn');
+document.getElementById("comments").onload = function() loadLike{
+    var like_btn = document.getElementById('like_btn');
     like_btn.onclick=function(){
-     alert('really')    ;
+        alert('really');
     }
 }
+
 
 // The first thing to do is to check if the user is logged in!
 loadLogin();
