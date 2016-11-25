@@ -299,3 +299,6 @@ loadOldest();
 loadLatest();
 loadLongest();
 
+$(document).ready(function(){
+   alert("hello") ;
+});
