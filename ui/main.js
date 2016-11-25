@@ -299,8 +299,4 @@ loadOldest();
 loadLatest();
 loadLongest();
 
-$(document).ready(function(){
-   $("#like_btn").click(function(){
-   alert('hello') ;    
-   });
-});
+    
